@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/addversion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:ems="14"
+        android:hint="@string/enter_version"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/addcodename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:ems="14"
+        android:hint="@string/enter_code_name"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+        app:layout_constraintTop_toBottomOf="@+id/addversion" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#D6D7D7"
+        android:text="@string/btn"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addcodename" />
+
+    <TableLayout
+        android:id="@+id/androidTable"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn"
+        >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:layout_marginTop="7dp"
+                android:padding="7dp"
+
+                android:text="@string/version"
+                android:fontFamily="casual"
+                android:textAllCaps="true"
+                android:layout_weight="2"
+                android:textColor="@color/white"
+                android:background="@color/design_default_color_primary"
+                android:layout_marginEnd="3dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginTop="7dp"
+                android:fontFamily="casual"
+
+                android:textColor="@color/white"
+                android:padding="5dp"
+                android:background="@color/design_default_color_primary"
+                android:textAllCaps="true"
+                android:text="@string/code_name"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+
+    </TableLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
