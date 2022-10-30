@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    @SuppressLint("ResourceType")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -52,6 +52,6 @@ class MainActivity : AppCompatActivity() {
         columnCodeName.setBackgroundResource(R.color.teal_200)
         columnCodeName.layoutParams = CodeNameParam
 
-        androidTable.addView(tableRow)
+        addTable.addView(tableRow)
     }
 }
