@@ -26,13 +26,13 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun addTableRow(vName: String, cName: String) {
-        val tableRow = TableRow(this)
+     fun addTableRow(vName: String, cName: String) {
+        val tableRow = TableRow(applicationContext)
 
-        val columnVersion = TextView(this)
+        val columnVersion = TextView(applicationContext)
         columnVersion.text = vName
 
-        val columnCodeName = TextView(this)
+        val columnCodeName = TextView(applicationContext)
         columnCodeName.text = cName
 
         tableRow.addView(columnVersion, 0)
@@ -41,15 +41,17 @@ class MainActivity : AppCompatActivity() {
         val VersionParam = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT).apply {
             setMargins(0, 2, 5, 0)
         }
-        VersionParam.weight = 1f
+
         columnVersion.setBackgroundResource(R.color.teal_200)
+        VersionParam.weight = 1f
         columnVersion.layoutParams = VersionParam
 
         val CodeNameParam = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT).apply {
             setMargins(0, 2, 0, 0)
         }
-        CodeNameParam.weight = 1f
+
         columnCodeName.setBackgroundResource(R.color.teal_200)
+        CodeNameParam.weight = 1f
         columnCodeName.layoutParams = CodeNameParam
 
         addTable.addView(tableRow)
